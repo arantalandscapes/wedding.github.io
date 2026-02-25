@@ -20,7 +20,6 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
 }
 
 .intro h1 {
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
   font-family: 'Great Vibes', cursive;
   font-size: 15vw;
   margin-bottom: 50px;
@@ -34,7 +33,7 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
 #envelope-btn {
   background-color: transparent;
   display: block;
-  width: 500px;
+  width: 800px;
   cursor: pointer;
   opacity: 0;
   animation: fadeInEnvelope 4s forwards 1s; /* fade-in setelah 2 detik */
