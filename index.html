@@ -44,25 +44,27 @@
 <div class="music-controls">
   <button id="muteBtn">🔊 Mute</button>
 </div>
-
+  
 <script>
   const music = document.getElementById('bg-music');
   const muteBtn = document.getElementById('muteBtn');
 
-  // pastikan autoplay, start tidak muted
-  music.muted = false;
-  music.play().catch(() => {
-    // kalau browser mencegah autoplay, bisa di-handle nanti
-    console.log('Autoplay gagal, user interaksi diperlukan');
-  });
+  // mulai muted dulu supaya autoplay bisa jalan
+  music.muted = true;
+  music.play().catch(() => console.log('Autoplay diblokir'));
 
   // tombol mute/unmute
   muteBtn.addEventListener('click', () => {
-    music.muted = !music.muted;
-    muteBtn.textContent = music.muted ? '🔇 Unmute' : '🔊 Mute';
+    if(music.muted){
+      music.muted = false;
+      muteBtn.textContent = '🔊 Mute';
+      music.play(); // pastikan play saat unmute
+    } else {
+      music.muted = true;
+      muteBtn.textContent = '🔇 Unmute';
+    }
   });
 </script>
-
   
   <section class="details" data-aos="fade-up">
     <h4>Wedding Details</h4>
