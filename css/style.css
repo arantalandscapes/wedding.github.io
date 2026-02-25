@@ -1,7 +1,39 @@
-.gallery img {
-  width: 90%;
-  max-width: 400px;
-  border-radius: 12px;
-  margin: 10px 0;
-  display: block;
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
+
+/* SECTION */
+section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+
+/* HERO */
+.hero { background: url('../images/prewed1.jpg') center/cover no-repeat; color: white; }
+.hero h1 { font-size: 8vw; font-family: 'Playfair Display', serif; margin-bottom: 10px; }
+
+/* CERITA */
+.story { background: #f8f4f1; color: #333; padding: 60px 20px; }
+.story h2 { font-size: 6vw; margin-bottom: 20px; }
+.story p { font-size: 4vw; max-width: 500px; }
+
+/* GALLERY */
+.gallery { background: #fff; padding: 40px 20px; }
+.gallery h2 { font-size: 6vw; margin-bottom: 20px; }
+.images-container img { width: 90%; max-width: 400px; margin: 10px 0; border-radius: 12px; display: block; }
+
+/* DETAIL */
+.details { background: #e8dcd5; }
+.details h2 { font-size: 6vw; margin-bottom: 15px; }
+.details p { font-size: 4vw; margin-bottom: 10px; }
+
+/* RSVP */
+.rsvp { background: #fff3f3; }
+.rsvp .btn { background: black; color: white; padding: 12px 25px; text-decoration: none; border-radius: 30px; margin-top: 20px; font-size: 4vw; display: inline-block; }
+
+/* CLOSING */
+.closing { background: #fdf6f0; padding: 60px 20px; }
+
+/* MEDIA QUERIES DESKTOP */
+@media (min-width: 768px) {
+  .hero h1 { font-size: 3rem; }
+  .story h2, .gallery h2, .details h2, .rsvp h2, .closing h2 { font-size: 2rem; }
+  .story p, .details p { font-size: 1rem; }
+  .rsvp .btn { font-size: 1rem; }
 }
