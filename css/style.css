@@ -15,14 +15,16 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
   align-items: center;
   text-align: center;
   position: relative;
-  overflow: hidden;
 }
 
 .intro h1 {
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
   font-family: 'Great Vibes', cursive;
   font-size: 8vw;
   margin-bottom: 50px;
   color: #fff;
+  z-index: 2;
+  position: relative;
   opacity: 0; /* mulai hidden */
   animation: fadeInText 4s forwards; /* fade-in langsung */
 }
@@ -30,10 +32,11 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
 #envelope-btn {
   background-color: transparent;
   display: block;
-  width: 110px;
+  width: 150px;
   cursor: pointer;
   opacity: 0;
-  animation: fadeInEnvelope 4s forwards 4s; /* fade-in setelah 2 detik */
+  animation: fadeInEnvelope 4s forwards 2s; /* fade-in setelah 2 detik */
+  position: relative;
 }
 
 @keyframes fadeInText {
