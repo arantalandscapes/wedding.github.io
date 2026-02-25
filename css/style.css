@@ -36,7 +36,13 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
 /* Animasi */
 @keyframes slide {
   0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* geser sebanyak 5 foto asli */
+  20%  { transform: translateX(-100vw); }
+  40%  { transform: translateX(-200vw); }
+  60%  { transform: translateX(-300vw); }
+  80%  { transform: translateX(-400vw); }
+  100% { transform: translateX(0); }
+}
+  100% { transform: translateX(0); }
 }
 
 /* DETAIL */
