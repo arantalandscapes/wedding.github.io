@@ -36,7 +36,7 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
 /* Animasi */
 @keyframes slide {
   0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* geser sebanyak 5 foto asli */
+  100% { transform: translateX(-100%); } /* geser sebanyak 5 foto asli */
 }
 
 /* DETAIL */
