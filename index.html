@@ -63,6 +63,7 @@ const music = document.getElementById('bg-music');
 
 envelopeBtn.addEventListener('click', () => {
 
+  intro.classList.add('blur');
   envelopeBtn.classList.add('zoom-in');
   setTimeout(() => {
    intro.style.display = 'none';
@@ -70,7 +71,7 @@ envelopeBtn.addEventListener('click', () => {
    heroCarousel.classList.add('fade-in-hero');
 
    music.play().catch(() => console.log('Autoplay gagal'));
-  }, 800);
+  }, 1000);
 });
 </script>
   
