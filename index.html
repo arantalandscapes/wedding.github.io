@@ -1,26 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="eng">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wedding Invitation</title>
+  <title>Wedding Invitation Mathias & Filia</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
-
 <body>
 
-  <section class="hero">
+  <section class="hero" data-aos=fade-up">
     <h1>Mathias & Filia</h1>
     <p>15 August 2027</p>
+  </section>
+
+  <section class="story" data-aos="fade-up">
+    <h2>Our Story</h2>
+    <p>We met eons ago when we were still in mid-school. Only God knows whether it was sheer coincidence or it was really the start of it all...</p>
   </section>
   
   <section class="gallery">
     <h2>Gallery</h2>
-    <img src="images/AnaïsPhotography_F&M55.jpg" alt="prewed ams 1">
-    <img src="images/AnaïsPhotography_F&M301.jpg" alt="prewed ams 2">
-    <img src="images/AnaïsPhotography_F&M283.jpg" alt="prewed ams 3">
-    <img src="images/AnaïsPhotography_F&M195.jpg" alt="prewed ams 4">
-    <img src="images/AnaïsPhotography_F&M109.jpg" alt="prewed ams 5">
+    <div class="images-container">
+      <img src="images/AnaïsPhotography_F&M55.jpg" alt="prewed ams 1">
+      <img src="images/AnaïsPhotography_F&M301.jpg" alt="prewed ams 2">
+      <img src="images/AnaïsPhotography_F&M283.jpg" alt="prewed ams 3">
+      <img src="images/AnaïsPhotography_F&M195.jpg" alt="prewed ams 4">
+      <img src="images/AnaïsPhotography_F&M109.jpg" alt="prewed ams 5">
+    </div>
   </section>
+
+  <section class="details" data-aos="fade-up">
+    <h3>Wedding Details</h3>
+    <p>Holy Matrimony: 9.00 WIB</p>
+    <p>Location: GRII Karawaci, Lippo Karawaci Utara, Tangerang 15810</p>
+    <p>Intimate Dinner: 18.00 WIB</p>
+    <p>Location: Imperial Klub Golf, Lippo Karawaci, Tangerang 15811</p>
+  </section>
+
+  <section class="rsvp" data-aos="fade-up">
+    <h3>RSVP</h3>
+    <p>Please confirm you attendance through this link</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYMoDPUspbuEGghn4fjyGKcxjI0Z4wsewwRsNuIiVvEg4BtQ/viewform?usp=sharing&ouid=114060335823943459392" class="btn">Attendance RSVP Form</a>
+  </section>
+
+  <section class="closing" data-aos="fade-up">
+    <h4>Thank You!</h4>
+    <p>See you in our wedding ceremony!</p>
+  </section>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ one: true });
+  </script>
   
 </body>
 </html>
