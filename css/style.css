@@ -28,7 +28,9 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
 }
 
 #envelope-btn {
-  width: 80px;
+  background-color: transparent;
+  display: block;
+  width: 110px;
   cursor: pointer;
   opacity: 0;
   animation: fadeInEnvelope 4s forwards 4s; /* fade-in setelah 2 detik */
