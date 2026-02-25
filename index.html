@@ -35,7 +35,25 @@
        <img src="images/5.jpg" alt="prewed ams 5">
     </div>
   </section>
+<!-- BACKGROUND MUSIC -->
+<audio id="bg-music" autoplay loop>
+  <source src="audio/2026-02-26-00-01-59.m4a" type="audio/mp4">
+  Browser kamu tidak mendukung audio.
+</audio>
 
+<!-- PLAY/PAUSE BUTTONS -->
+<div class="music-controls">
+  <button id="playBtn">▶️ Play Music</button>
+  <button id="pauseBtn">⏸ Pause Music</button>
+</div>
+
+<script>
+  const music = document.getElementById('bg-music');
+  document.getElementById('playBtn').addEventListener('click', () => music.play());
+  document.getElementById('pauseBtn').addEventListener('click', () => music.pause());
+</script>
+
+  
   <section class="details" data-aos="fade-up">
     <h4>Wedding Details</h4>
     <p>Holy Matrimony: 9.00 WIB</p>
