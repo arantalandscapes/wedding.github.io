@@ -34,7 +34,7 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
 .intro h1 {
   font-family: 'Great Vibes', cursive;
   font-size: 15vw;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   color: #fff;
   z-index: 2;
   position: relative;
