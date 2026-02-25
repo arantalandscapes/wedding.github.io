@@ -14,33 +14,32 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
 .story p { font-size: 4vw; max-width: 500px; }
 
 /* GALLERY */
+* { box-sizing: border-box; margin:0; padding:0; }
+
 .carousel-section {
   position: relative;
   width: 100%;
-  height: 100vh;       /* section setinggi layar */
+  height: 100vh;       /* full viewport height */
   overflow: hidden;
 }
 
 .carousel-track {
   display: flex;
-  width: 300%;          /* jumlah foto x 100% */
+  width: 1000%;        /* 10 foto total (5 asli + 5 duplikat) */
   height: 100%;
-  animation: slide 12s linear infinite;
+  animation: slide 30s linear infinite; /* durasi bisa disesuaikan */
 }
 
 .carousel-track img {
-  width: 100vw;         /* setiap foto mengisi layar penuh */
-  height: 100vh;
-  object-fit: cover;    /* foto cover tanpa distorsi */
+  width: 100vw;         /* setiap foto penuh lebar layar */
+  height: 100vh;        /* tinggi layar penuh */
+  object-fit: cover;    /* foto cover section */
   flex-shrink: 0;
 }
 
-/* Animasi slide otomatis */
 @keyframes slide {
   0%   { transform: translateX(0); }
-  33%  { transform: translateX(-100vw); }
-  66%  { transform: translateX(-200vw); }
-  100% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* geser sebanyak 5 foto asli */
 }
 
 /* DETAIL */
