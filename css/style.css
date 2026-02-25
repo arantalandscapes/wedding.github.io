@@ -15,12 +15,35 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
 
 /* GALLERY */
 .gallery { background: #fff; padding: 40px 20px; }
-.gallery h2 { font-size: 6vw; margin-bottom: 20px; }
-.images-container img { width: 90%; max-width: 400px; margin: 10px 0; border-radius: 12px; display: block; }
+.gallery h3 { font-size: 6vw; margin-bottom: 20px; }
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  animation: scroll 12s linear infinite;
+}
+
+.carousel-track img {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 12px;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
 
 /* DETAIL */
 .details { background: #e8dcd5; }
-.details h2 { font-size: 6vw; margin-bottom: 15px; }
+.details h4 { font-size: 6vw; margin-bottom: 15px; }
 .details p { font-size: 4vw; margin-bottom: 10px; }
 
 /* RSVP */
@@ -33,7 +56,7 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
 /* MEDIA QUERIES DESKTOP */
 @media (min-width: 768px) {
   .hero h1 { font-size: 3rem; }
-  .story h2, .gallery h2, .details h2, .rsvp h2, .closing h2 { font-size: 2rem; }
+  .story h2, .gallery h3, .details h4, .rsvp h4, .closing h5 { font-size: 2rem; }
   .story p, .details p { font-size: 1rem; }
   .rsvp .btn { font-size: 1rem; }
 }
