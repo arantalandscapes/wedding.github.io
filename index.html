@@ -6,8 +6,19 @@
   <title>Wedding Invitation Mathias & Filia</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
+
+<!-- 1️⃣ Landing page Save the Date -->
+<section id="intro" class="intro">
+  <h1>Save the Date</h1>
+  <img src="images/WhatsApp Image 2026-02-26 at 00.42.22.jpeg" id="envelope-btn" alt="Open Invitation">
+</section>
+
+<!-- 2️⃣ Hero + Carousel (hidden dulu) -->
+<section id="hero-carousel" style="display:none;">
+  
 
   <section class="hero" data-aos=fade-up">
     <div class="hero-overlay">
@@ -35,35 +46,31 @@
        <img src="images/5.jpg" alt="prewed ams 5">
     </div>
   </section>
+  
 <!-- BACKGROUND MUSIC -->
 <audio id="bg-music" autoplay loop>
   <source src="audio/2026-02-26-00-01-59.m4a" type="audio/mp4">
   Browser kamu tidak mendukung audio.
 </audio>
 
-<div class="music-controls">
-  <button id="muteBtn">🔊 Mute</button>
-</div>
   
+<!-- 3️⃣ JavaScript interaksi -->
 <script>
-  const music = document.getElementById('bg-music');
-  const muteBtn = document.getElementById('muteBtn');
+const intro = document.getElementById('intro');
+const heroCarousel = document.getElementById('hero-carousel');
+const envelopeBtn = document.getElementById('envelope-btn');
+const music = document.getElementById('bg-music');
 
-  // mulai muted dulu supaya autoplay bisa jalan
-  music.muted = true;
-  music.play().catch(() => console.log('Autoplay diblokir'));
+envelopeBtn.addEventListener('click', () => {
+  // sembunyikan landing page
+  intro.style.display = 'none';
 
-  // tombol mute/unmute
-  muteBtn.addEventListener('click', () => {
-    if(music.muted){
-      music.muted = false;
-      muteBtn.textContent = '🔊 Mute';
-      music.play(); // pastikan play saat unmute
-    } else {
-      music.muted = true;
-      muteBtn.textContent = '🔇 Unmute';
-    }
-  });
+  // tampilkan hero + carousel
+  heroCarousel.style.display = 'block';
+
+  // play music (autoplay setelah user interaction)
+  music.play().catch(() => console.log('Autoplay gagal'));
+});
 </script>
   
   <section class="details" data-aos="fade-up">
