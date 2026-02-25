@@ -24,14 +24,14 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
   margin-bottom: 50px;
   color: #fff;
   opacity: 0; /* mulai hidden */
-  animation: fadeInText 2s forwards; /* fade-in langsung */
+  animation: fadeInText 4s forwards; /* fade-in langsung */
 }
 
 #envelope-btn {
-  width: 150px;
+  width: 80px;
   cursor: pointer;
   opacity: 0;
-  animation: fadeInEnvelope 2s forwards 2s; /* fade-in setelah 2 detik */
+  animation: fadeInEnvelope 4s forwards 4s; /* fade-in setelah 2 detik */
 }
 
 @keyframes fadeInText {
