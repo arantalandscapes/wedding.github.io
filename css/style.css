@@ -8,7 +8,9 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
 .intro {
   width: 100%;
   height: 100vh;
-  background-color: #A3A078; /* ganti sesuai keinginan */
+  background-image: url('../images/WhatsApp Image 2026-02-26 at 00.44.09.jpeg'); /* ganti sesuai keinginan */
+  background-size: cover;         /* foto menutupi seluruh section */
+  background-position: center; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,7 +22,7 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
 .intro h1 {
   text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
   font-family: 'Great Vibes', cursive;
-  font-size: 8vw;
+  font-size: 15vw;
   margin-bottom: 50px;
   color: #fff;
   z-index: 2;
@@ -32,10 +34,10 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
 #envelope-btn {
   background-color: transparent;
   display: block;
-  width: 150px;
+  width: 500px;
   cursor: pointer;
   opacity: 0;
-  animation: fadeInEnvelope 4s forwards 2s; /* fade-in setelah 2 detik */
+  animation: fadeInEnvelope 4s forwards 1s; /* fade-in setelah 2 detik */
   position: relative;
 }
 
@@ -50,7 +52,7 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
 /* HERO */
 .hero {
   width: 100%;
-  height: 75vh;                 /* full viewport height */
+  height: 100vh;                 /* full viewport height */
   background-image: url('../images/Hero.jpg'); /* ganti sesuai foto kamu */
   background-size: cover;         /* foto menutupi seluruh section */
   background-position: center;    /* fokus ke tengah foto */
