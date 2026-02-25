@@ -62,14 +62,15 @@ const envelopeBtn = document.getElementById('envelope-btn');
 const music = document.getElementById('bg-music');
 
 envelopeBtn.addEventListener('click', () => {
-  // sembunyikan landing page
-  intro.style.display = 'none';
 
-  // tampilkan hero + carousel
-  heroCarousel.style.display = 'block';
+  envelopeBtn.classList.add('zoom-in');
+  setTimeout(() => {
+   intro.style.display = 'none';
+   heroCarousel.style.display = 'block';
+   heroCarousel.classList.add('fade-in-hero');
 
-  // play music (autoplay setelah user interaction)
-  music.play().catch(() => console.log('Autoplay gagal'));
+   music.play().catch(() => console.log('Autoplay gagal'));
+  }, 800);
 });
 </script>
   
