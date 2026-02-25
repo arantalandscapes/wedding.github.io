@@ -23,7 +23,7 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
 .carousel-track {
   display: flex;
   width: 1000%; /* 5 foto asli + 5 duplikat = 10 foto total → 10*100%? Nanti dipakai % relatif */
-  animation: slide 60s linear infinite; /* durasi lebih lama karena 5 foto */
+  animation: slide 25s linear infinite; /* durasi lebih lama karena 5 foto */
 }
 
 .carousel-track img {
