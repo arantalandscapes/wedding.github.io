@@ -47,8 +47,20 @@
 
 <script>
   const music = document.getElementById('bg-music');
-  document.getElementById('playBtn').addEventListener('click', () => music.play());
-  document.getElementById('pauseBtn').addEventListener('click', () => music.pause());
+  const muteBtn = document.getElementById('muteBtn');
+
+  // pastikan autoplay, start tidak muted
+  music.muted = false;
+  music.play().catch(() => {
+    // kalau browser mencegah autoplay, bisa di-handle nanti
+    console.log('Autoplay gagal, user interaksi diperlukan');
+  });
+
+  // tombol mute/unmute
+  muteBtn.addEventListener('click', () => {
+    music.muted = !music.muted;
+    muteBtn.textContent = music.muted ? '🔇 Unmute' : '🔊 Mute';
+  });
 </script>
 
   
