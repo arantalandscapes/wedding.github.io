@@ -215,6 +215,10 @@ sections.forEach(section => {
 
   video.addEventListener('ended', function() {
   videoSection.classList.remove("show");
+
+  SetTimeout(() => {
+    videoSection.style.display ="none";
+  }, 1500);
 });
 
 });
