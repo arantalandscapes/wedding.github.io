@@ -1,15 +1,9 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
 
-.section {
-  background: url("../images/WhatsApp Image 2026-02-26 at 00.44.09.jpeg") center/cover no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
 #envelope-btn {
   z-index: 999999;
-  posisiton: relative;
+  position: relative;
 }
 
 /* SECTION */
