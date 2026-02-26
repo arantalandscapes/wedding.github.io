@@ -8,6 +8,17 @@ body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
 }
 
 /* SECTION */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40pc);
+  transition: all 1.8s ease;
+}
+
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
 
 /* 1️⃣ Landing Page */
