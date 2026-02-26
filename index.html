@@ -159,45 +159,45 @@ onSnapshot(q, (snapshot) => {
 
 <!-- 3️⃣ JavaScript interaksi -->
 <script>
-const intro = document.getElementById('intro');
-const heroCarousel = document.getElementById('hero-carousel');
-const envelopeBtn = document.getElementById('envelope-btn');
-const music = document.getElementById('bg-music');
-const videoSection = document.getElementById('video-intro');
-const video = document.getElementById('intro-video');
+document.addEventListener("DOMContentLoaded", function() {
 
-envelopeBtn.addEventListener('click', () => {
+  const intro = document.getElementById('intro');
+  const heroCarousel = document.getElementById('hero-carousel');
+  const envelopeBtn = document.getElementById('envelope-btn');
+  const music = document.getElementById('bg-music');
+  const videoSection = document.getElementById('video-intro');
+  const video = document.getElementById('intro-video');
 
-  // Fade in music sekali saja
-  music.volume = 0;
-  music.play();
+  if (!envelopeBtn) {
+    console.log("ENVELOPE TIDAK DITEMUKAN");
+    return;
+  }
 
-  let vol = 0;
-  const fadeAudio = setInterval(() => {
-    if (vol < 1) {
-      vol += 0.05;
-      music.volume = vol;
-    } else {
-      clearInterval(fadeAudio);
-    }
-  }, 200);
+  envelopeBtn.addEventListener('click', function() {
 
-  // Hide intro
-  intro.style.display = 'none';
+    music.volume = 0;
+    music.play();
 
-  // Show video
-  videoSection.classList.add('show');
-  video.play().catch(err => console.log("Video gagal:", err));
-});
+    let vol = 0;
+    const fadeAudio = setInterval(() => {
+      if (vol < 1) {
+        vol += 0.05;
+        music.volume = vol;
+      } else {
+        clearInterval(fadeAudio);
+      }
+    }, 200);
 
-// Saat video selesai
-video.addEventListener('ended', () => {
+    intro.style.display = "none";
+    videoSection.classList.add("show");
 
-  videoSection.classList.remove('show');
+    video.play().catch(err => console.log(err));
+  });
 
-  setTimeout(() => {
-    heroCarousel.style.display = 'block';
-  }, 1500);
+  video.addEventListener('ended', function() {
+    videoSection.classList.remove("show");
+    heroCarousel.style.display = "block";
+  });
 
 });
 </script>
