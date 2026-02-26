@@ -7,6 +7,11 @@ body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
   background-attachment: fixed;
 }
 
+#envelope-btn {
+  z-index: 999999;
+  posisiton: relative;
+}
+
 /* SECTION */
 .fade-section {
   opacity: 0;
