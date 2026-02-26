@@ -138,6 +138,22 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
   object-fit: cover;
 }
 
+.video-prewed {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+.video-prewed video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
 /* HERO */
 .hero {
   width: 100%;
