@@ -99,8 +99,6 @@
     AOS.init({ one: true });
   </script>
 
-
-/*FIREBASE SCRIPT*/
   
 <script type="module">
 
@@ -171,21 +169,33 @@ const video = document.getElementById('intro-video');
 
 envelopeBtn.addEventListener('click', () => {
 
+  // Play music langsung
+  music.play().catch(() => console.log('Autoplay gagal'));
+
+  // Fade out intro screen
   intro.classList.add('blur');
-  envelopeBtn.classList.add('zoom-in');
 
   setTimeout(() => {
     intro.style.display = 'none';
-    videoSection.style.display = 'block';
+
+    // Show video overlay
+    videoSection.classList.add('show');
     video.play();
-  }, 1000);
+
+  }, 800);
 });
 
 video.addEventListener('ended', () => {
-  videoSection.style.display = 'none';
-  heroCarousel.style.display = 'block';
-  heroCarousel.classList.add('fade-in-hero');
-  music.play().catch(() => console.log('Autoplay gagal'));
+
+  // Fade out video
+  videoSection.classList.add('hide');
+
+  setTimeout(() => {
+    videoSection.style.display = "none";
+    heroCarousel.style.display = "block";
+    heroCarousel.classList.add('fade-in-hero');
+  }, 1500);
+
 });
 </script>
   
