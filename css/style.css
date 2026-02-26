@@ -15,7 +15,7 @@ body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
 /* SECTION */
 .fade-section {
   opacity: 0;
-  transform: translateY(40pc);
+  transform: translateY(40px);
   transition: all 1.8s ease;
 }
 
