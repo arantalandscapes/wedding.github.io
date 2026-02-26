@@ -166,17 +166,26 @@ const heroCarousel = document.getElementById('hero-carousel');
 const envelopeBtn = document.getElementById('envelope-btn');
 const music = document.getElementById('bg-music');
 
+const videoSection = document.getElementById('video-intro');
+const video = document.getElementById('intro-video');
+
 envelopeBtn.addEventListener('click', () => {
 
   intro.classList.add('blur');
   envelopeBtn.classList.add('zoom-in');
-  setTimeout(() => {
-   intro.style.display = 'none';
-   heroCarousel.style.display = 'block';
-   heroCarousel.classList.add('fade-in-hero');
 
-   music.play().catch(() => console.log('Autoplay gagal'));
+  setTimeout(() => {
+    intro.style.display = 'none';
+    videoSection.style.display = 'block';
+    video.play();
   }, 1000);
+});
+
+video.addEventListener('ended', () => {
+  videoSection.style.display = 'none';
+  heroCarousel.style.display = 'block';
+  heroCarousel.classList.add('fade-in-hero');
+  music.play().catch(() => console.log('Autoplay gagal'));
 });
 </script>
   
