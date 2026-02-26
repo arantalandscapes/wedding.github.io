@@ -1,5 +1,9 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
+body { font-family: 'Montserrat', sans-serif; 
+      scroll-behavior: smooth; 
+
+      background: url("../images/WhatsApp Image 2026-02-26 at 00.44.09.jpeg") center/cover no-repeat fixed;
+     }
 
 #envelope-btn {
   z-index: 999999;
@@ -18,7 +22,16 @@ body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
   transform: translateY(0);
 }
 
-section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+section { 
+  min-height: 100vh; 
+  padding: 60px 20px; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  background: transparent;
+}
 
 /* 1️⃣ Landing Page */
 .intro {
@@ -157,9 +170,6 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
 .hero {
   width: 100%;
   height: 100vh;                 /* full viewport height */
-  background-image: url('../images/WhatsApp Image 2026-02-26 at 00.44.09.jpeg'); /* ganti sesuai foto kamu */
-  background-size: cover;         /* foto menutupi seluruh section */
-  background-position: center;    /* fokus ke tengah foto */
   position: relative;
   display: flex;
   justify-content: center;        /* horizontal center */
@@ -191,9 +201,6 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
 .story { 
   width: 100%;
   height: 100vh;                 /* full viewport height */
-  background-image: url('../images/WhatsApp Image 2026-02-26 at 00.44.09.jpeg'); /* ganti sesuai foto kamu */
-  background-size: cover;         /* foto menutupi seluruh section */
-  background-position: center;    /* fokus ke tengah foto */
   position: relative;
   display: flex;
   justify-content: center;        /* horizontal center */
@@ -256,9 +263,6 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
 .details { 
   width: 100%;
   height: 100vh;                 /* full viewport height */
-  background-image: url('../images/WhatsApp Image 2026-02-26 at 00.44.09.jpeg'); /* ganti sesuai foto kamu */
-  background-size: cover;         /* foto menutupi seluruh section */
-  background-position: center;    /* fokus ke tengah foto */
   position: relative;
   display: flex;
   justify-content: center;        /* horizontal center */
@@ -273,9 +277,6 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
 .rsvp { 
   width: 100%;
   height: 100vh;                 /* full viewport height */
-  background-image: url('../images/WhatsApp Image 2026-02-26 at 00.44.09.jpeg'); /* ganti sesuai foto kamu */
-  background-size: cover;         /* foto menutupi seluruh section */
-  background-position: center;    /* fokus ke tengah foto */
   position: relative;
   display: flex;
   justify-content: center;        /* horizontal center */
@@ -289,9 +290,6 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
 .wishes { 
   width: 100%;
   height: 100vh;                 /* full viewport height */
-  background-image: url('../images/WhatsApp Image 2026-02-26 at 00.44.09.jpeg'); /* ganti sesuai foto kamu */
-  background-size: cover;         /* foto menutupi seluruh section */
-  background-position: center;    /* fokus ke tengah foto */
   position: relative;
   display: flex;
   justify-content: center;        /* horizontal center */
@@ -304,9 +302,6 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
 .closing {
   width: 100%;
   height: 100vh;                 /* full viewport height */
-  background-image: url('../images/WhatsApp Image 2026-02-26 at 00.44.09.jpeg'); /* ganti sesuai foto kamu */
-  background-size: cover;         /* foto menutupi seluruh section */
-  background-position: center;    /* fokus ke tengah foto */
   position: relative;
   display: flex;
   justify-content: center;        /* horizontal center */
