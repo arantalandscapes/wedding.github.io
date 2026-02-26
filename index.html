@@ -163,20 +163,38 @@ const intro = document.getElementById('intro');
 const heroCarousel = document.getElementById('hero-carousel');
 const envelopeBtn = document.getElementById('envelope-btn');
 const music = document.getElementById('bg-music');
-
 const videoSection = document.getElementById('video-intro');
 const video = document.getElementById('intro-video');
-const sections = document.querySelectorAll('.fade-section');
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
-  });
-}, {
-  threshold: 0.2
+envelopeBtn.addEventListener('click', () => {
+
+  // Mainkan music
+  music.play();
+
+  // Sembunyikan intro
+  intro.style.display = 'none';
+
+  // Tampilkan video
+  videoSection.classList.add('show');
+
+  // Paksa play video
+  video.play().catch(err => console.log("Video gagal:", err));
 });
+
+// Saat video selesai
+video.addEventListener('ended', () => {
+
+  videoSection.classList.remove('show');
+
+  setTimeout(() => {
+    heroCarousel.style.display = 'block';
+  }, 1500);
+
+});
+
+{
+  threshold: 0.2
+};
 
 sections.forEach(section => {
   observer.observe(section);
