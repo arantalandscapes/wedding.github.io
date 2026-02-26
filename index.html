@@ -40,7 +40,7 @@
     <p>We met eons ago when we were still in mid-school. Only God knows whether it was sheer coincidence or it was really the start of it all...</p>
   </section>
   
-  <section class="carousel fade-section">
+  <section class="carousel-section fade-section">
     <div class="carousel-track">
        <img src="images/2.jpg" alt="prewed ams 1">
        <img src="images/1.jpg" alt="prewed ams 2">
@@ -172,7 +172,21 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("ENVELOPE TIDAK DITEMUKAN");
     return;
   }
+const sections = document.querySelectorAll(".fade-section");
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+sections.forEach(section => {
+  observer.observe(section);
+});
   envelopeBtn.addEventListener('click', function() {
 
     music.volume = 0;
@@ -200,27 +214,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 });
-</script>
-<script>
-document.getElementById("envelope-btn").onclick = function() {
-  alert("CLICK WORKING");
-};
-const sections = document.querySelectorAll(".fade-section");
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-}, {
-  threshold: 0.2
-});
-
-sections.forEach(section => {
-  observer.observe(section);
-});
-  
 </script>
   
 </body>
