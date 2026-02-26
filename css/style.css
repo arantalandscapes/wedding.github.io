@@ -98,6 +98,13 @@ section { min-height: 100vh; padding: 60px 20px; display: flex; flex-direction: 
   }
 }
 
+/* INTRO VIDEO */
+#video-intro video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
 /* HERO */
 .hero {
   width: 100%;
