@@ -147,14 +147,18 @@ envelopeBtn.addEventListener('click', () => {
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYMoDPUspbuEGghn4fjyGKcxjI0Z4wsewwRsNuIiVvEg4BtQ/viewform?usp=sharing&ouid=114060335823943459392" class="btn">Attendance RSVP Form</a>
   </section>
 
-  <section class="wishes">
-    <h4>Leave a Wish 💌</h4>
-
-    <input type="text" id="name" placeholder="Your name">
-    <textarea id="message" placeholder="Write your wish..."></textarea>
-    <button id="sendWish">Send</button>
-
-      <div id="wishList"></div>
+  <section class="section wishes">
+    <div class="container">
+       <h4>Leave a Wish 💌</h4>
+       <div class="wish-form">
+         <input type="text" id="name" placeholder="Your name">
+         <textarea id="message" placeholder="Write your wish..."></textarea>
+         <button id="sendWish">Send</button>
+       </div>
+      
+      <div id="wishList">
+        
+      </div>
   </section>
 
   <section class="closing" data-aos="fade-up">
