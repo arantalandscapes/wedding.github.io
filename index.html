@@ -184,35 +184,35 @@ sections.forEach(section => {
   
 envelopeBtn.addEventListener('click', () => {
 
-  // Play music langsung
-  music.play().catch(() => console.log('Autoplay gagal'));
+  // Music fade in sekali saja
+  music.volume = 0;
+  music.play();
 
-  // Fade out intro screen
-  intro.classList.add('blur');
+  let vol = 0;
+  const fade = setInterval(() => {
+    if (vol < 1) {
+      vol += 0.05;
+      music.volume = vol;
+    } else {
+      clearInterval(fade);
+    }
+  }, 200);
 
-  setTimeout(() => {
-    intro.style.display = 'none';
-
-    // Show video overlay
-    videoSection.classList.add('show');
-    video.play();
-
-  }, 800);
+  intro.style.display = 'none';
+  videoSection.classList.add('show');
+  video.play();
 });
 
 video.addEventListener('ended', () => {
 
-  // Fade out video
-  videoSection.classList.add('hide');
+  videoSection.classList.remove('show');
 
   setTimeout(() => {
-    videoSection.style.display = "none";
-    heroCarousel.style.display = "block";
+    heroCarousel.style.display = 'block';
     heroCarousel.classList.add('fade-in-hero');
   }, 1500);
 
-  music.volume = 0;
-  music.play();
+});
 
   let vol = 0;
   const dafeAudio = setInterval(() => {
