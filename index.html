@@ -28,19 +28,19 @@
 <section id="hero-carousel" style="display:none;">
   
 
-  <section class="hero" data-aos="fade-up">
+  <section class="hero fade-section">
     <div class="hero-overlay">
      <h2>Mathias & Filia</h2>
      <p>15 August 2027</p>
     </div>
   </section>
 
-  <section class="story" data-aos="fade-up">
+  <section class="story fade-section">
     <h3>Our Story</h3>
     <p>We met eons ago when we were still in mid-school. Only God knows whether it was sheer coincidence or it was really the start of it all...</p>
   </section>
   
-  <section class="carousel-section">
+  <section class="carousel fade-section">
     <div class="carousel-track">
        <img src="images/2.jpg" alt="prewed ams 1">
        <img src="images/1.jpg" alt="prewed ams 2">
@@ -61,21 +61,21 @@
   Browser kamu tidak mendukung audio.
 </audio>
  
-  <section class="details" data-aos="fade-up">
+<section class="details fade-section">
     <h5>Wedding Details</h5>
     <p>Holy Matrimony: 9.00 WIB</p>
     <p>Location: GRII Karawaci, Lippo Karawaci Utara, Tangerang 15810</p>
     <p>Intimate Dinner: 18.00 WIB</p>
     <p>Location: Imperial Klub Golf, Lippo Karawaci, Tangerang 15811</p>
-  </section>
+</section>
 
-  <section class="rsvp" data-aos="fade-up">
+<section class="rsvp fade-section">
     <h6>RSVP</h6>
     <p>Please confirm you attendance through this link</p>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYMoDPUspbuEGghn4fjyGKcxjI0Z4wsewwRsNuIiVvEg4BtQ/viewform?usp=sharing&ouid=114060335823943459392" class="btn">Attendance RSVP Form</a>
-  </section>
+</section>
 
-  <section class="section wishes">
+<section class="wishes fade-section">
     <div class="container">
        <h7>Leave a Wish 💌</h7>
        <div class="wish-form">
@@ -87,12 +87,12 @@
       <div id="wishList">
         
       </div>
-  </section>
+</section>
 
-  <section class="closing" data-aos="fade-up">
+<section class="closing fade-section">
     <h8>Thank You!</h8>
     <p>See you in our wedding ceremony!</p>
-  </section>
+</section>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
@@ -166,7 +166,22 @@ const music = document.getElementById('bg-music');
 
 const videoSection = document.getElementById('video-intro');
 const video = document.getElementById('intro-video');
+const sections = document.querySelectorAll('.fade-section');
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+  
 envelopeBtn.addEventListener('click', () => {
 
   // Play music langsung
@@ -195,6 +210,19 @@ video.addEventListener('ended', () => {
     heroCarousel.style.display = "block";
     heroCarousel.classList.add('fade-in-hero');
   }, 1500);
+
+  music.volume = 0;
+  music.play();
+
+  let vol = 0;
+  const dafeAudio = setInterval(() => {
+    if (vol < 1) {
+      vol +=0.05;
+      music.volume = vol;
+    } else {
+      clearInterval(fadeAudio);
+    }
+  }, 200);
 
 });
 </script>
