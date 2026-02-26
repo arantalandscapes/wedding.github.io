@@ -18,7 +18,7 @@
 </section>
 
 <section id="video-intro">
-  <video id="intro-video" playsinline muted autoplay>
+  <video id="intro-video" playsinline muted>
     <source src="video/WhatsApp Video 2026-02-26 at 14.58.38.mp4" type="video/mp4">
   </video>
 </section>
@@ -168,16 +168,25 @@ const video = document.getElementById('intro-video');
 
 envelopeBtn.addEventListener('click', () => {
 
-  // Mainkan music
+  // Fade in music sekali saja
+  music.volume = 0;
   music.play();
 
-  // Sembunyikan intro
+  let vol = 0;
+  const fadeAudio = setInterval(() => {
+    if (vol < 1) {
+      vol += 0.05;
+      music.volume = vol;
+    } else {
+      clearInterval(fadeAudio);
+    }
+  }, 200);
+
+  // Hide intro
   intro.style.display = 'none';
 
-  // Tampilkan video
+  // Show video
   videoSection.classList.add('show');
-
-  // Paksa play video
   video.play().catch(err => console.log("Video gagal:", err));
 });
 
@@ -189,58 +198,6 @@ video.addEventListener('ended', () => {
   setTimeout(() => {
     heroCarousel.style.display = 'block';
   }, 1500);
-
-});
-
-{
-  threshold: 0.2
-};
-
-sections.forEach(section => {
-  observer.observe(section);
-});
-  
-envelopeBtn.addEventListener('click', () => {
-
-  // Music fade in sekali saja
-  music.volume = 0;
-  music.play();
-
-  let vol = 0;
-  const fade = setInterval(() => {
-    if (vol < 1) {
-      vol += 0.05;
-      music.volume = vol;
-    } else {
-      clearInterval(fade);
-    }
-  }, 200);
-
-  intro.style.display = 'none';
-  videoSection.classList.add('show');
-  video.play();
-});
-
-video.addEventListener('ended', () => {
-
-  videoSection.classList.remove('show');
-
-  setTimeout(() => {
-    heroCarousel.style.display = 'block';
-    heroCarousel.classList.add('fade-in-hero');
-  }, 1500);
-
-});
-
-  let vol = 0;
-  const dafeAudio = setInterval(() => {
-    if (vol < 1) {
-      vol +=0.05;
-      music.volume = vol;
-    } else {
-      clearInterval(fadeAudio);
-    }
-  }, 200);
 
 });
 </script>
