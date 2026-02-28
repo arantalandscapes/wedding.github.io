@@ -4,6 +4,13 @@ body { font-family: 'Montserrat', sans-serif;
 
       background: url("../images/WhatsApp Image 2026-02-26 at 00.44.09.jpeg") center/cover no-repeat fixed;
      }
+html, body {
+      overflow-x: hidden;
+}
+
+img, video {
+      max-width: 100%;
+}
 
 #envelope-btn {
   z-index: 999999;
@@ -69,7 +76,8 @@ section {
 #envelope-btn {
   background-color: transparent;
   display: block;
-  width: 400px;
+  width: 80%;
+  max-widht: 400px;
   cursor: pointer;
   opacity: 0;
   animation: fadeInEnvelope 4s forwards 1s; /* fade-in setelah 2 detik */
@@ -224,7 +232,7 @@ section {
 }
 
 .carousel-track img {
-  width: 100vw;         /* setiap foto penuh lebar layar */
+  width: 100%;         /* setiap foto penuh lebar layar */
   height: 100vh;        /* tinggi layar penuh */
   object-fit: cover;    /* foto cover section */
   flex-shrink: 0;
